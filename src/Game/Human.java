@@ -22,6 +22,22 @@ public class Human implements Warrior, Mage, Archer {
         this.mageAttackDamage = mageAttackDamage;
     }
 
+    public int getWarriorDamage() {
+        return warriorDamage;
+    }
+
+    public int getArcherSHootDamage() {
+        return archerSHootDamage;
+    }
+
+    public int getArcherAttackDamage() {
+        return archerAttackDamage;
+    }
+
+    public int getMageAttackDamage() {
+        return mageAttackDamage;
+    }
+
     @Override
     public void attack(Unit unit) {
         System.out.print("атакует мечом (наносит " + warriorDamage + " урона). ");

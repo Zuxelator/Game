@@ -50,12 +50,12 @@ public class Orc implements Warrior, Mage, Archer{
         int random = (int) (Math.random() * enemy.getSize());
         System.out.print("накладывает проклятие на персонажа вражеского отряда: " + (enemy.getUnits()[random]).getName() + " стал слабее");
         if ((enemy.getUnits()[random] instanceof AgregWarrior)) {
-            ((Human)((AgregWarrior)enemy.getUnits()[random]).getWarrior()).setWarriorDamage((int)(this.warriorDamage/1.5));
+            ((Human)((AgregWarrior)enemy.getUnits()[random]).getWarrior()).setWarriorDamage((int) (((Human)((AgregWarrior)enemy.getUnits()[random]).getWarrior()).getWarriorDamage()/1.5));
         } else if ((enemy.getUnits()[random] instanceof AgregArcher)) {
-            ((Human)((AgregArcher)enemy.getUnits()[random]).getArcher()).setArcherAttackDamage((int)(this.archerAttackDamage/1.5));
-            ((Human)((AgregArcher)enemy.getUnits()[random]).getArcher()).setArcherSHootDamage((int)(this.archerSHootDamage/1.5));
+            ((Human)((AgregArcher)enemy.getUnits()[random]).getArcher()).setArcherAttackDamage((int) (((Human)((AgregArcher)enemy.getUnits()[random]).getArcher()).getArcherAttackDamage()/1.5));
+            ((Human)((AgregArcher)enemy.getUnits()[random]).getArcher()).setArcherSHootDamage((int) (((Human)((AgregArcher)enemy.getUnits()[random]).getArcher()).getArcherSHootDamage()/1.5));
         } else if((enemy.getUnits()[random] instanceof AgregMage)) {
-            ((Human)((AgregMage)enemy.getUnits()[random]).getMage()).setMageAttackDamage((int)(this.mageAttackDamage/1.5));
+            ((Human)((AgregMage)enemy.getUnits()[random]).getMage()).setMageAttackDamage((int) (((Human)((AgregMage)enemy.getUnits()[random]).getMage()).getMageAttackDamage()/1.5));
         }
         return team;
     }
