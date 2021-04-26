@@ -5,5 +5,6 @@ public class Main {
         Team humans = new Team("Люди");
         Team orcs = new Team("Орки");
         Team.start(humans, orcs);
+        System.out.println();
     }
 }
